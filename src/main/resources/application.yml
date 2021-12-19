@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/classic
+    driverClassName: org.mariadb.jdbc.Driver
+    username: jo
+    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+#      show-sql: true System out 을 통해서 찍음
+
+logging:
+  level:
+    org.hibernate.SQL: debug # logger를 사용해서 로그 찍음
+    org.hibernate.type: trace
+server:
+  port: 8080
