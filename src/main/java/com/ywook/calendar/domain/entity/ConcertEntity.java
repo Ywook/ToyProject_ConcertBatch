@@ -6,13 +6,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name="CONECRT_CALENDAR")
+@Table(name="CONCERT_CALENDAR")
 public class ConcertEntity {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +33,7 @@ public class ConcertEntity {
         private String concertHall;
 
         @Column(name = "CONCERT_DATE")
-        private LocalDateTime CONCERT_DATE;
+        private LocalDate concertDate;
 
         @Version
         @Column(name = "ENTITY_VERSION")
